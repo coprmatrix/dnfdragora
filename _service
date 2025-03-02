@@ -1,0 +1,15 @@
+<services>
+  <service name="obs_scm">
+    <param name="url">https://github.com/huakim/dnfdragora</param>
+    <param name="scm">git</param>
+    <param name="versionformat">@PARENT_TAG@</param>
+    <param name="changesgenerate">enable</param>
+    <param name="versionrewrite-pattern">(.*)</param>
+  </service>
+  <service name="tar"  mode="buildtime"/>
+  <service name="set_version"/>
+  <service name="recompress"  mode="buildtime">
+    <param name="file">*.tar</param>
+    <param name="compression">gz</param>
+  </service>
+</services>
