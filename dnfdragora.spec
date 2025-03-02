@@ -40,8 +40,9 @@ Requires:	python3-PyYAML
 Requires:	python3-yui		>= 1.1.1-10
 
 Provides:	%{name}-gui		= %{version}-%{release}
-Requires:	(libyui-mga-qt if qt5-qtbase-gui)
-Requires:	(libyui-mga-gtk if gtk3)
+Recommends:	(libyui-mga-qt if qt5-qtbase-gui)
+Recommends:	(libyui-mga-qt if qt6-qtbase-gui)
+Recommends:	(libyui-mga-gtk if gtk3)
 
 %description
 %{name} is a DNF frontend, based on rpmdragora from Mageia
